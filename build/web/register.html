@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Đăng ký</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="UserServlet" method="post">
+            <table style="width: 350px;">
+                <tr style="text-align: center;">
+                    <td colspan="2"><h2>ĐĂNG KÝ TÀI KHOẢN</h2></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="email" placeholder="Email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Mật khẩu:</label>
+                    </td>
+                    <td>
+                        <input type="password" name="password" placeholder="Mật khẩu">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="role">Công việc:</label>
+                    </td>
+                    <td>
+                        <select name="role" id="role">
+                            <option value="staff" selected>Staff</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr style="text-align: center;">
+                    <td colspan="2">
+                        <input type="submit" value="Đăng ký" style="color: #ff4c00; margin-right: 10px;">
+                        <input type="reset" value="Khôi phục" style="color: #ff4c00" onclick="resetForm()">
+
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <script>
+            function resetForm() {
+                document.getElementById('role').value = 'staff';
+            }
+        </script>
+    </body>
+</html>
